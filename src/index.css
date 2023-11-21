@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Caveat:wght@500&family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components{
+  .input{
+    @apply bg-transparent rounded-lg p-4 border border-solid border-[#4e0eff] text-white w-full text-base focus:outline-none focus:border-[#997af0] focus:border focus:border-solid
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,button,input{
+  font-family: "Josefin Sans",sans-serif;
+}
+
+body{
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
