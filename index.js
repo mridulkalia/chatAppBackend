@@ -6,6 +6,7 @@ let app = new express();
 let router = require("./routes/userRoute");
 let messageRoute = require("./routes/messagesRoute");
 let socket = require("socket.io");
+const BASE_url = process.env.BASE_URL;
 
 database();
 
@@ -22,7 +23,7 @@ const server = app.listen(port, () => {
 
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: `${BASE_url}`,
     credentials: true,
   },
 });
